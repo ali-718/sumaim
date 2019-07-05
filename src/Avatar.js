@@ -5,6 +5,7 @@ import 'tachyons';
 import Avatarlist from './Avatarlist'; 
 
 const Avatar = (props) => {
+
     const avatarlistarray = [
         {
             id:1,
@@ -31,17 +32,17 @@ const Avatar = (props) => {
         }
     ]
 
-    
-
-    })
 
     return (
         <div>
             <h1>Wellcome To Avatar World</h1>
-             arrayavatarcard = avatarlistarray.map( (avatarcard, i) => {
-         <Avatarlist id={avatarlistarray[i].name}
-                            name={avatarlistarray[i].name}
-                            designation={avatarlistarray[i].designation} />
+            
+            {avatarlistarray.map((avatar,i) => (
+                <Avatarlist id={avatar.name}
+                name={avatar.name}
+                designation={avatar.designation} />
+            ))}
+            
 
             
             {/* <arrayavatarcard />  */}
@@ -66,5 +67,6 @@ const Avatar = (props) => {
         </div>
     )
 }
+
 
 export default Avatar;
